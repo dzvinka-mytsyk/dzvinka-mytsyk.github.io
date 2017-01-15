@@ -40,7 +40,7 @@ title: Portfolio
                 </div>
 
                 <div id="grid-container" class="cbp">
-                  {% assign cbpp = 'portfolio.html#cbp=' %}
+
                     {% for item in site.portfolio %}
                     <div class="cbp-item {{ item.category }}">
 
@@ -52,7 +52,7 @@ title: Portfolio
                                 <div class="cbp-l-caption-alignCenter">
                                     <div class="cbp-l-caption-body">
 
-                                        <a href="{{ item.url | prepend: site.baseurl }}" class="cbp-singlePage cbp-l-caption-buttonLeft">more info</a>
+                                        <a href="{{ item.url | prepend: site.baseurl }}" class="cbp-singlePage-1  cbp-l-caption-buttonLeft">more info</a>
 
                                         <!-- <a href="/{{ site.baseurl | append: cbpp | append: item.url }}" target="_blank" class="cbp-singlePage cbp-l-caption-buttonLeft">more info</a> -->
 
