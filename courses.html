@@ -1,0 +1,61 @@
+---
+layout: books-courses
+menu: about
+title: Completed courses
+breadcrumb: Courses
+---
+
+      <div class="book-post">
+        <h2>Courses I Recently Took</h2>
+        <p>
+          On this page I have put the list on <a href = "https://en.wikipedia.org/wiki/Massive_open_online_course" target="_blank">online courses</a> I recently completed. Please use the filters below to see subsets of the cources releant to the chosen theme. Each "course item" on this page has a link to its web-page (opens in a new tab/window), so you can click and enjoy exploring further.
+        </p>
+        <div class="divide20"></div>
+
+        <!--cube start-->
+        <div class="portfolio-cube">
+
+            <div id="filters-container" class="cbp-l-filters-button">
+                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+                    All <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".management" class="cbp-filter-item">
+                    Management <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".web" class="cbp-filter-item">
+                    Web <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".development" class="cbp-filter-item">
+                    Development <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".product" class="cbp-filter-item">
+                    Product <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".culture" class="cbp-filter-item">
+                    Culture <div class="cbp-filter-counter"></div>
+                </div>
+                <div data-filter=".learning" class="cbp-filter-item">
+                    Learning <div class="cbp-filter-counter"></div>
+                </div>
+            </div>
+
+            <div id="grid-books-container" class="list-group cbp">
+                {% for course in site.cources %}
+                <div class="cbp-item {{ course.category }}">
+
+                    <a href="{{ course.couseUrl }}" class="{{ course.platform }} list-book-item" target="_blank">
+                      <p> <span class="list-book-item-title"><i class="ti-book"></i>  {{ course.title }} </span>
+                       {{ course.institution }} {{ course.platformemf }}</p>
+                    </a>
+
+                </div>
+                {% endfor %}
+            </div>
+
+
+        </div>
+
+        <!--cube end-->
+
+      </div>
+      <!--blog post-->

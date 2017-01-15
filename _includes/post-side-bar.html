@@ -1,0 +1,95 @@
+<div class="col-md-3 col-md-offset-1">
+    <!-- <div class="sidebar-box margin40">
+        <h4>Search</h4>
+        <form role="form" class="search-widget">
+            <input type="text" class="form-control">
+            <i class="fa fa-search"></i>
+        </form>
+    </div> -->
+    <!--sidebar-box-->
+    <div class="sidebar-box margin40">
+        <h4>Welcome to my blog</h4>
+        <p>
+          At the momnt I don't have too many posts here, which definitely has to change and soon :)
+        </p>
+        <!-- <p>
+          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni. Sed ut perspiciatis unde omnis iste natus error sit voluptatem dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.
+        </p> -->
+        <p>
+          Also, please visit the <a href="/about.html">About me</a> page to learn some more details or my contact information.
+        </p>
+
+    </div>
+
+    <!-- <div class="sidebar-box margin40">
+        <h4>Tag Cloud</h4>
+        <div class="tag-list">
+            <a href="#">Product Management</a>
+            <a href="#">IT Industry</a>
+            <a href="#">Business</a>
+            <a href="#">Analysis</a>
+            <a href="#">Development</a>
+            <a href="#">Marketing</a>
+            <a href="#">fashion</a>
+            <a href="#">Media</a>
+            <a href="#">Photoshop</a>
+        </div>
+    </div> -->
+
+    <!-- <div class="sidebar-box margin40">
+        <h4>Tag Cloud</h4>
+        <div class="cbp-l-filters-button">
+          <div data-filter=".product" class="cbp-filter-item">
+              Product Management <div class="cbp-filter-counter"></div>
+          </div>
+          <div data-filter=".it" class="cbp-filter-item">
+              IT Industry <div class="cbp-filter-counter"></div>
+          </div>
+          <div data-filter=".business" class="cbp-filter-item">
+              Analysis <div class="cbp-filter-counter"></div>
+          </div>
+          <div data-filter=".business" class="cbp-filter-item">
+              Software Development <div class="cbp-filter-counter"></div>
+          </div>
+          <div data-filter=".business" class="cbp-filter-item">
+              Business <div class="cbp-filter-counter"></div>
+          </div>
+          <div data-filter=".business" class="cbp-filter-item">
+              Communication <div class="cbp-filter-counter"></div>
+          </div>
+        </div>
+    </div> -->
+
+    <!--sidebar-box-->
+    <!-- <div class="sidebar-box margin40">
+        <h4>Categories</h4>
+        <ul class="list-unstyled cat-list">
+            <li> <a href="#">Marketing</a> <i class="fa fa-angle-right"></i></li>
+            <li> <a href="#">Videos</a> <i class="fa fa-angle-right"></i></li>
+            <li> <a href="#">Sports</a> <i class="fa fa-angle-right"></i></li>
+            <li> <a href="#">Fashion</a> <i class="fa fa-angle-right"></i></li>
+            <li> <a href="#">Media</a> <i class="fa fa-angle-right"></i></li>
+            <li> <a href="#">Seo</a> <i class="fa fa-angle-right"></i></li>
+            <li> <a href="#">Marketing</a> <i class="fa fa-angle-right"></i></li>
+        </ul>
+    </div> -->
+    <!--sidebar-box-->
+    <div class="sidebar-box margin40">
+        <h4>Recent Posts</h4>
+       <ul class="list-unstyled popular-post">
+           {% for post in site.posts limit:3 %}
+            <li>
+                <div class="popular-img">
+                    <a href="{{ post.url | prepend: site.baseurl }}"> <img src="{{ post.blogpicurl }}" class="img-responsive" alt=""></a>
+                </div>
+                <div class="popular-desc">
+                    <h5> <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+                    <h6>{{ post.date | date_to_string }}</h6>
+                </div>
+            </li>
+          {% endfor %}
+
+        </ul>
+    </div><!--sidebar-box-->
+
+</div><!--sidebar-col-->

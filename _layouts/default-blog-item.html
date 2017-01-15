@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+        <div class="breadcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>{{ page.title}}</h4>
+                    </div>
+                    <div class="col-sm-6 hidden-xs text-right">
+                        <ol class="breadcrumb">
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/blog.html">Blog</a></li>
+                            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title}}</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div><!--breadcrumbs-->
+        <div class="divide20"></div>
+        <div class="container">
+
+                  <ul class="pager">
+                  <li class="previous"><a href="/blog.html">← Back to all posts</a></li>
+              </ul>
+        </div>
+        <div class="container" >
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="blog-post"  style="padding-right:30px; border-right:1px #ebeaea solid; height:100%;">
+                            <div>
+                                <img src="{{ page.blogpicurl }}" class="img-responsive" alt="workimg">
+
+                            </div>
+                        <ul class="list-inline post-detail-single">
+                            <li>by Dzvinka</li>
+                            <li><i class="fa fa-calendar"></i> {{ page.date | date_to_string }} </li>
+                            <li><i class="fa fa-tag"></i> {{ page.category }} </li>
+                        </ul>
+
+                        <h2>{{ page.title }}</h2>
+                          <div class="blog-paragraph">
+                            {{ content }}
+                          </div>
+                    </div><!--blog post-->
+
+                    <!-- <ul class="pager">
+                        <li class="previous"><a href="#">&larr; Previous Page</a></li>
+                        <li class="next"><a href="#">Next Page &rarr;</a></li>
+                    </ul> -->
+                    <!--pager-->
+                    <div class="divide10"></div>
+
+                </div><!--col-->
+
+            {% include post-side-bar.html %}
+
+            </div><!--row for blog post-->
+        </div><!--blog full main container-->
+        <div class="divide60"></div>
+
+
+        {% include footer.html %}
+        {% include scripts.html %}
+
+      </body>
+
+    </html>

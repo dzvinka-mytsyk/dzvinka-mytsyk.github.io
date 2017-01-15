@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+        <div class="breadcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Recent blog entries</h4>
+                    </div>
+                    <div class="col-sm-6 hidden-xs text-right">
+                        <ol class="breadcrumb">
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/blog.html">Blog</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div><!--breadcrumbs-->
+        <div class="divide80"></div>
+
+
+
+        <div class="container blog-left-img">
+            <div class="row">
+                <div class="col-md-8">
+                    {{ content }}
+
+                    <!-- <ul class="pager">
+                        <li class="previous"><a href="#">&larr; Previous Page</a></li>
+                        <li class="next"><a href="#">Next Page &rarr;</a></li>
+                    </ul> -->
+                    <!--pager-->
+                    <div class="divide60"></div>
+
+                </div><!--col-->
+
+            {% include post-side-bar.html %}
+
+            </div><!--row for blog post-->
+        </div><!--blog full main container-->
+        <div class="divide10"></div>
+
+
+        {% include footer.html %}
+        {% include scripts.html %}
+
+      </body>
+
+    </html>

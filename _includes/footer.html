@@ -1,0 +1,70 @@
+<footer id="footer">
+ <div class="container">
+
+     <div class="row">
+         <div class="col-md-4 col-sm-6 margin30">
+             <div class="footer-col">
+                 <h3>Social</h3>
+                 <p>
+                     Let's stay connected:
+                 </p>
+                 <ul class="list-inline footer-social">
+
+                   {% for icon in site.socialnets %}
+                     <li>
+                         <a href="{{ icon.href }}" target="_blank" class="social-icon si-dark si-gray-round {{ icon.footercssclass }} ">
+                             <i class="fa {{ icon.icon }}"></i>
+                             <i class="fa {{ icon.icon }}"></i>
+                         </a>
+                     </li>
+                   {% endfor %}
+
+                 </ul>
+             </div>
+         </div><!--footer col-->
+         <div class="col-md-4 col-sm-6 margin30">
+             <div class="footer-col">
+                 <h3>Contact</h3>
+
+                 <ul class="list-unstyled contact">
+                     <li><p><strong><i class="fa fa-map-marker"></i> Location:</strong> Berlin, Germany</p></li>
+                     <li><p><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="mailto:dzvinka.mytsyk.contact@gmail.com">dzvinka.mytsyk.contact@gmail.com</a></p></li>
+                     <li> <p><strong><i class="fa fa-skype"></i> Skype</strong> dzvenyslava.mytsyk</p></li>
+
+                 </ul>
+
+             </div>
+         </div><!--footer col-->
+         <div class="col-md-4 col-sm-6 margin30">
+             <div class="footer-col">
+                 <h3>Featured Work</h3>
+                 <ul class="list-inline f2-work">
+                   {% assign cbp = 'portfolio.html#cbp=' %}
+                   {% for item in site.portfolio limit:8 %}
+                     <li><a href="{{ item.url | prepend: site.baseurl }}" target="_blank"><img src="{{ item.itemPictureUrl }}"
+                       class="img-responsive" alt=""></a></li>
+                   {% endfor %}
+                 </ul>
+             </div>
+         </div><!--footer col-->
+         <!-- <div class="col-md-3 col-sm-6 margin30">
+             <div class="footer-col">
+                 <h3>Newsletter</h3>
+                 <p>
+                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lorem quam,
+                 </p>
+
+             </div>
+         </div> -->
+         <!--footer col-->
+
+     </div>
+     <div class="row">
+         <div class="col-md-12 text-center">
+             <div class="footer-btm">
+                 <span>&copy;2017. All rights reserved.</span>
+             </div>
+         </div>
+     </div>
+ </div>
+</footer><!--default footer end here-->

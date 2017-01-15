@@ -1,0 +1,73 @@
+---
+layout: default
+menu: portfolio
+title: Portfolio
+---
+
+
+        <div class="breadcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>Portfolio</h4>
+                    </div>
+                    <div class="col-sm-6 hidden-xs text-right">
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Portfolio</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div><!--breadcrumbs-->
+        <div class="divide80"></div>
+        <div class="container">
+            <div class="portfolio-cube">
+
+                <div id="filters-container" class="cbp-l-filters-button">
+                    <div data-filter="*" class="cbp-filter-item-active cbp-filter-item">
+                        All <div class="cbp-filter-counter"></div>
+                    </div>
+                    <div data-filter=".product" class="cbp-filter-item">
+                        Product Management <div class="cbp-filter-counter"></div>
+                    </div>
+                    <div data-filter=".agile" class="cbp-filter-item">
+                        Agile Practices <div class="cbp-filter-counter"></div>
+                    </div>
+                    <div data-filter=".analysis" class="cbp-filter-item">
+                        Business Analysis <div class="cbp-filter-counter"></div>
+                    </div>
+                </div>
+
+                <div id="grid-container" class="cbp">
+                  {% assign cbpp = 'portfolio.html#cbp=' %}
+                    {% for item in site.portfolio %}
+                    <div class="cbp-item {{ item.category }}">
+
+                        <div class="cbp-caption">
+                            <div class="cbp-caption-defaultWrap">
+                                <img src="{{ item.itemPictureUrl }}" alt="">
+                            </div>
+                            <div class="cbp-caption-activeWrap">
+                                <div class="cbp-l-caption-alignCenter">
+                                    <div class="cbp-l-caption-body">
+
+                                        <a href="{{ item.url | prepend: site.baseurl }}" class="cbp-singlePage cbp-l-caption-buttonLeft">more info</a>
+
+                                        <!-- <a href="/{{ site.baseurl | append: cbpp | append: item.url }}" target="_blank" class="cbp-singlePage cbp-l-caption-buttonLeft">more info</a> -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cbp-l-grid-projects-title">{{ item.title }}</div>
+                        <div class="cbp-l-grid-projects-desc">{{ item.category }}</div>
+
+                    </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+
+        </div>
+        <div class="divide60"></div>

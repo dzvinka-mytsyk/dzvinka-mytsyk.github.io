@@ -1,0 +1,38 @@
+---
+layout: full-blog
+menu: blog
+title: Blog posts
+---
+{% for blog in site.posts %}
+                    <div class="blog-post">
+
+                        <div class="row">
+
+                            <div class="col-md-6 ">
+                                <a href="{{ blog.url | prepend: site.baseurl }}">
+                                    <div class="item-img-wrap">
+                                        <img src="{{ blog.blogpicurl }}" class="img-responsive" alt="workimg">
+                                        <div class="item-img-overlay">
+                                            <span></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-inline post-detail">
+                                    <li>by Dzvinka</li>
+                                    <li><i class="fa fa-calendar"></i> {{ blog.date | date_to_string }}</li>
+                                    <li><i class="fa fa-tag"></i> {{ blog.category }}</li>
+                                </ul>
+                                <h2><a href="{{ blog.url | prepend: site.baseurl }}">{{ blog.title }}</a></h2>
+                                <p>
+                                    {{ blog.summary }}
+                                </p>
+                                <p><a href="{{ blog.url | prepend: site.baseurl }}" class="btn btn-theme-dark">Read More...</a></p>
+                            </div>
+
+                        </div>
+                    </div>
+
+{% endfor %}
+                    <!--blog post-->
