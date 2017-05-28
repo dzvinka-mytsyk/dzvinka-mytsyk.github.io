@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body>
+
+    {% include header.html %}
+
+        <div class="breadcrumb-wrap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <h4>{{ page.title}}</h4>
+                    </div>
+                    <div class="col-sm-6 hidden-xs text-right">
+                        <ol class="breadcrumb">
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/blog.html">Blog</a></li>
+                            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title}}</a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div><!--breadcrumbs-->
+
+    <div class="divide20"></div>
+    <div class="container">
+
+              <ul class="pager">
+              <li class="previous"><a href="/portfolio.html">← Back to full Portfolio</a></li>
+          </ul>
+    </div>
+
+    <div class="container portfolio-details">
+        <div class="row">
+            <div class="col-md-8 portfolio-single-slide margin-btm-40">
+                <img src="{{page.itemPictureUrl}}" class="img-responsive" alt="">
+            </div>
+            <div class="col-md-4">
+                <div class="portfolio-single-desc">
+                  <h3>{{ page.title}}</h3>
+
+                  {{ content }}
+
+                </div>
+                <br>
+                <div class="portfolio-side-bar">
+                    <p>
+                        <a href="{{ page.viewDetailsUrl }}" target="_blank" class="btn btn-theme-bg btn-sm">View details</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div><!--portfolio single container end-->
+    <div class="divide60"></div>
+
+
+    {% include footer.html %}
+    {% include scripts.html %}
+
+    </body>
+
+    </html>
